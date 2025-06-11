@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="انجمن آینده روشن - حمایت از کودکان بی‌سرپرست | هر کودکی شایسته عشق و آینده‌ای روشن است">
+<meta name="keywords" content="کودکان بی‌سرپرست, خیریه, حمایت از کودکان, آینده روشن, NGO">
+<meta name="author" content="انجمن آینده روشن">
+
+<title>انجمن آینده روشن - حمایت از کودکان بی‌سرپرست</title>
+
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<style>
+
+:root {
+--primary-blue: #3498db;
+--primary-yellow: #f1c40f;
+--primary-green: #2ecc71;
+--primary-purple: #9b59b6;
+--white: #ffffff;
+--light-gray: #f8f9fa;
+--dark-gray: #333333;
+--shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+--shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Vazir', 'IRANSans', sans-serif;
+direction: rtl;
+background: var(--white);
+color: var(--dark-gray);
+}
+
+
+.header-top {
+background: var(--primary-blue);
+color: white;
+padding: 10px 0;
+font-size: 14px;
+}
+
+.header-top .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header-social a {
+color: white;
+margin: 0 5px;
+transition: transform 0.3s;
+}
+
+.header-social a:hover {
+transform: translateY(-3px);
+}
+
+.site-header {
+background: white;
+box-shadow: var(--shadow-sm);
+position: sticky;
+top: 0;
+z-index: 1000;
+transition: all 0.3s ease;
+}
+
+.navbar {
+padding: 15px 0;
+}
+
+.navbar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.logo {
+display: flex;
+align-items: center;
+text-decoration: none;
+gap: 10px;
+}
+
+.logo img {
+width: 50px;
+height: 50px;
+}
+
+.logo-text {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary-blue);
+}
+
+.main-menu {
+display: flex;
+list-style: none;
+gap: 25px;
+margin: 0;
+padding: 0;
+}
+
+.main-menu a {
+color: var(--dark-gray);
+text-decoration: none;
+font-weight: 500;
+position: relative;
+padding: 5px 0;
+transition: color 0.3s;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+color: var(--primary-blue);
+}
+
+.main-menu a::after {
+content: '';
+position: absolute;
+bottom: -2px;
+right: 0;
+width: 0;
+height: 2px;
+background: var(--primary-yellow);
+transition: width 0.3s;
+}
+
+.main-menu a:hover::after,
+.main-menu a.active::after {
+width: 100%;
+}
+
+.btn {
+padding: 10px 25px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+transition: all 0.3s;
+text-decoration: none;
+display: inline-block;
+font-weight: 500;
+}
+
+.btn-donate {
+background: linear-gradient(135deg, #e74c3c, #f39c12);
+color: white;
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+
+.mobile-menu-toggle {
+display: none;
+background: none;
+border: none;
+font-size: 24px;
+cursor: pointer;
+}
+
+
+.hero-slider {
+height: 600px;
+position: relative;
+overflow: hidden;
+}
+
+.hero-slide {
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-size: cover;
+background-position: center;
+position: relative;
+}
+
+.hero-slide::before {
+content: '';
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+position: relative;
+text-align: center;
+color: white;
+max-width: 800px;
+padding: 2rem;
+z-index: 1;
+}
+
+.hero-title {
+font-size: 3rem;
+font-weight: bold;
+margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+font-size: 1.5rem;
+margin-bottom: 2rem;
+}
+
+.news-ticker {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(52, 152, 219, 0.9);
+color: white;
+padding: 10px 0;
+overflow: hidden;
+}
+
+.news-ticker-content {
+display: flex;
+animation: ticker 30s linear infinite;
+white-space: nowrap;
+}
+
+@keyframes ticker {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+
+.news-item {
+padding: 0 50px;
+}
+
+
+.stats-section {
+background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+color: white;
+padding: 60px 0;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 30px;
+text-align: center;
+}
+
+.stat-item {
+padding: 20px;
+}
+
+.stat-number {
+font-size: 3rem;
+font-weight: bold;
+color: white;
+margin-bottom: 10px;
+}
+
+.stat-label {
+font-size: 1.2rem;
+color: rgba(255,255,255,0.9);
+}
+
+
+.card {
+border: none;
+border-radius: 15px;
+box-shadow: var(--shadow-md);
+overflow: hidden;
+transition: all 0.3s;
+height: 100%;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-lg);
+}
+
+.card-img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card-body {
+padding: 1.5rem;
+}
+
+.card-title {
+color: var(--primary-blue);
+font-size: 1.25rem;
+margin-bottom: 0.75rem;
+}
+
+.card-text {
+color: #666;
+margin-bottom: 1rem;
+}
+
+
+.section {
+padding: 60px 0;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 3rem;
+}
+
+.section-title h2 {
+color: var(--primary-blue);
+font-size: 2.5rem;
+position: relative;
+display: inline-block;
+padding: 0 60px;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+content: '';
+position: absolute;
+top: 50%;
+width: 50px;
+height: 2px;
+background: var(--primary-yellow);
+}
+
+.section-title h2::before {
+right: 0;
+}
+
+.section-title h2::after {
+left: 0;
+}
+
+
+.activity-card {
+text-align: center;
+padding: 2rem;
+height: 100%;
+transition: transform 0.3s;
+}
+
+.activity-card:hover {
+transform: translateY(-10px);
+}
+
+.activity-icon {
+width: 80px;
+height: 80px;
+margin: 0 auto 1rem;
+background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 2rem;
+}
+
+
+.campaign-progress {
+background: white;
+border-radius: 10px;
+padding: 2rem;
+box-shadow: var(--shadow-md);
+margin-bottom: 2rem;
+height: 100%;
+}
+
+.progress-custom {
+height: 30px;
+background: #e0e0e0;
+border-radius: 15px;
+overflow: hidden;
+margin: 1rem 0;
+}
+
+.progress-bar-custom {
+height: 100%;
+background: linear-gradient(90deg, var(--primary-yellow), var(--primary-green));
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-weight: bold;
+}
+
+
+.kindness-wall {
+background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+padding: 60px 0;
+}
+
+.kindness-messages {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+}
+
+.kindness-card {
+background: white;
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: var(--shadow-sm);
+transform: rotate(-2deg);
+transition: all 0.3s;
+}
+
+.kindness-card:nth-child(even) {
+transform: rotate(2deg);
+}
+
+.kindness-card:hover {
+transform: rotate(0) scale(1.05);
+box-shadow: var(--shadow-lg);
+}
+
+
+.child-of-month {
+background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+color: white;
+padding: 60px 0;
+}
+
+.child-profile {
+display: flex;
+align-items: center;
+gap: 3rem;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.child-image {
+width: 300px;
+height: 300px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid white;
+box-shadow: var(--shadow-lg);
+}
+
+.child-info h3 {
+color: var(--primary-yellow);
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+
+.link-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 2rem;
+height: 100%;
+text-decoration: none;
+color: var(--dark-gray);
+transition: all 0.3s;
+}
+
+.link-card:hover {
+transform: translateY(-5px);
+color: var(--primary-blue);
+}
+
+.link-card i {
+margin-bottom: 1rem;
+transition: color 0.3s;
+}
+
+.link-card h5 {
+margin: 0;
+font-size: 1.1rem;
+}
+
+
+.site-footer {
+background: #222;
+color: white;
+padding: 60px 0 20px;
+}
+
+.footer-content {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+margin-bottom: 30px;
+}
+
+.footer-section h4 {
+color: var(--primary-yellow);
+margin-bottom: 1rem;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+color: #ccc;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-section a:hover {
+color: white;
+}
+
+.social-links {
+display: flex;
+gap: 10px;
+margin-top: 1rem;
+}
+
+.social-links a {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(255,255,255,0.1);
+border-radius: 50%;
+color: white;
+transition: all 0.3s;
+}
+
+.social-links a:hover {
+background: var(--primary-blue);
+transform: translateY(-3px);
+}
+
+.footer-bottom {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid #444;
+color: #999;
+}
+
+
+body.dark-mode {
+background: #1a1a1a;
+color: #e0e0e0;
+}
+
+body.dark-mode .site-header {
+background: #2d2d2d;
+}
+
+body.dark-mode .main-menu a {
+color: #e0e0e0;
+}
+
+body.dark-mode .main-menu a:hover {
+color: var(--primary-yellow);
+}
+
+body.dark-mode .card {
+background: #2d2d2d;
+color: #e0e0e0;
+}
+
+body.dark-mode .card-title {
+color: var(--primary-yellow);
+}
+
+body.dark-mode .card-text {
+color: #b0b0b0;
+}
+
+body.dark-mode .stats-section {
+background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+border-top: 1px solid #444;
+border-bottom: 1px solid #444;
+}
+
+body.dark-mode .stat-number,
+body.dark-mode .stat-label {
+color: white !important;
+}
+
+body.dark-mode .campaign-progress {
+background: #2d2d2d;
+}
+
+body.dark-mode .kindness-wall {
+background: #1a1a1a;
+}
+
+body.dark-mode .kindness-card {
+background: #2d2d2d;
+color: #e0e0e0;
+}
+
+body.dark-mode .link-card {
+background: #2d2d2d;
+color: #e0e0e0;
+}
+
+body.dark-mode .section-title h2 {
+color: var(--primary-yellow);
+}
+
+body.dark-mode .activity-card h4,
+body.dark-mode .activity-card p {
+color: #e0e0e0;
+}
+
+
+.scroll-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 50px;
+height: 50px;
+background: var(--primary-blue);
+color: white;
+border: none;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s;
+z-index: 1000;
+}
+
+.scroll-to-top.visible {
+opacity: 1;
+visibility: visible;
+}
+
+.dark-mode-toggle {
+position: fixed;
+bottom: 20px;
+left: 20px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: var(--primary-blue);
+color: white;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+transition: all 0.3s;
+box-shadow: var(--shadow-lg);
+z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+transform: scale(1.1);
+}
+
+body.dark-mode .dark-mode-toggle {
+background: var(--primary-yellow);
+color: #1a1a1a;
+}
+
+.dark-mode-toggle .fa-sun {
+display: none;
+}
+
+body.dark-mode .dark-mode-toggle .fa-moon {
+display: none;
+}
+
+body.dark-mode .dark-mode-toggle .fa-sun {
+display: block;
+}
+
+
+.mobile-menu {
+position: fixed;
+top: 0;
+right: -300px;
+width: 300px;
+height: 100vh;
+background: white;
+box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+transition: right 0.3s;
+z-index: 2000;
+display: none;
+}
+
+.mobile-menu.active {
+right: 0;
+}
+
+.mobile-menu-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-header img {
+width: 40px;
+}
+
+.mobile-menu-close {
+background: none;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+.mobile-menu-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.mobile-menu-list li {
+border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-list a {
+display: block;
+padding: 1rem;
+color: #333;
+text-decoration: none;
+transition: all 0.3s;
+}
+
+.mobile-menu-list a:hover {
+background: #f8f9fa;
+color: var(--primary-blue);
+}
+
+
+@media (max-width: 768px) {
+.main-menu {
+display: none;
+}
+
+.mobile-menu-toggle {
+display: block;
+}
+
+.hero-title {
+font-size: 2rem;
+}
+
+.hero-subtitle {
+font-size: 1.2rem;
+}
+
+.child-image {
+width: 200px;
+height: 200px;
+}
+
+.section {
+padding: 40px 0;
+}
+
+.btn-donate {
+display: none;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header-top">
+<div class="container">
+<div class="emergency-contact">
+<i class="fas fa-phone-alt"></i>
+<span>خط اضطراری: 021-12345678</span>
+</div>
+<div class="header-social">
+<a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
+<a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+<a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+</div>
+
+
+<header class="site-header">
+<nav class="navbar">
+<div class="container">
+
+<a href="index.html" class="logo">
+<img src="images/logo.png" alt="لوگو انجمن آینده روشن">
+<span class="logo-text">آینده روشن</span>
+</a>
+
+
+<ul class="main-menu">
+<li><a href="index.html" class="active">صفحه اصلی</a></li>
+<li><a href="about.html">معرفی سازمان</a></li>
+<li><a href="team.html">مدیران</a></li>
+<li><a href="calendar.html">تقویم فعالیت‌ها</a></li>
+<li><a href="membership.html">عضویت</a></li>
+<li><a href="contact-form.html">ارتباط با ما</a></li>
+<li><a href="contact.html">تماس با ما</a></li>
+</ul>
+
+
+<a href="#donate" class="btn btn-donate">
+<i class="fas fa-heart"></i>
+کمک فوری
+</a>
+
+
+<button class="mobile-menu-toggle d-lg-none">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</nav>
+</header>
+
+
+<section class="hero-slider">
+<div class="swiper heroSwiper">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<div class="hero-slide" style="background-image: url('https://source.unsplash.com/1600x900/?children,education');">
+<div class="hero-content">
+<h1 class="hero-title">به خانواده 2500 کودک بپیوندید</h1>
+<p class="hero-subtitle">هر کودکی شایسته عشق و آینده‌ای روشن است</p>
+<div class="hero-buttons">
+<a href="membership.html" class="btn btn-primary btn-lg mx-2">حامی شوید</a>
+<a href="about.html" class="btn btn-secondary btn-lg mx-2">بیشتر بدانید</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="hero-slide" style="background-image: url('https://source.unsplash.com/1600x900/?classroom,learning');">
+<div class="hero-content">
+<h1 class="hero-title">آموزش رایگان برای همه کودکان</h1>
+<p class="hero-subtitle">12 مرکز آموزشی فعال در سراسر کشور</p>
+<div class="hero-buttons">
+<a href="#donate" class="btn btn-primary btn-lg mx-2">کمک کنید</a>
+<a href="calendar.html" class="btn btn-secondary btn-lg mx-2">برنامه‌ها</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="hero-slide" style="background-image: url('https://source.unsplash.com/1600x900/?happy,children');">
+<div class="hero-content">
+<h1 class="hero-title">کمپین لبخند - اهدای لوازم‌التحریر</h1>
+<p class="hero-subtitle">بیش از 5000 بسته آموزشی توزیع شده</p>
+<div class="hero-buttons">
+<a href="#campaign" class="btn btn-primary btn-lg mx-2">مشارکت کنید</a>
+<a href="#gallery" class="btn btn-secondary btn-lg mx-2">گالری تصاویر</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-pagination"></div>
+
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+
+
+<div class="news-ticker">
+<div class="news-ticker-content">
+<span class="news-item">🎉 ثبت‌نام کلاس‌های تابستانی آغاز شد</span>
+<span class="news-item">📚 توزیع 500 بسته لوازم‌التحریر در مناطق محروم</span>
+<span class="news-item">🏆 کسب رتبه اول المپیاد توسط دانش‌آموزان ما</span>
+<span class="news-item">💝 پیوستن 50 حامی جدید در ماه گذشته</span>
+</div>
+</div>
+</section>
+
+
+<section class="stats-section">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item" data-aos="fade-up">
+<div class="stat-number counter" data-target="2547">2547</div>
+<div class="stat-label">کودک تحت حمایت</div>
+</div>
+<div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+<div class="stat-number counter" data-target="156">156</div>
+<div class="stat-label">حامی فعال</div>
+</div>
+<div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+<div class="stat-number counter" data-target="89">89</div>
+<div class="stat-label">برنامه اجرا شده</div>
+</div>
+<div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+<div class="stat-number counter" data-target="12">12</div>
+<div class="stat-label">مرکز آموزشی</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section" style="background: #f8f9fa;">
+<div class="container">
+<div class="section-title">
+<h2>مقالات برگزیده</h2>
+</div>
+
+<div class="swiper articlesSwiper">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<div class="card">
+<img src="https://source.unsplash.com/400x250/?child,psychology" alt="روانشناسی کودک" class="card-img">
+<div class="card-body">
+<h3 class="card-title">چگونه با کودکان آسیب‌دیده ارتباط برقرار کنیم</h3>
+<p class="card-text">روش‌های علمی و کاربردی برای برقراری ارتباط موثر با کودکانی که تجربیات سخت داشته‌اند...</p>
+<a href="#" class="btn btn-primary">ادامه مطلب</a>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="card">
+<img src="https://source.unsplash.com/400x250/?children,playing" alt="بازی کودکان" class="card-img">
+<div class="card-body">
+<h3 class="card-title">اهمیت بازی در رشد کودک</h3>
+<p class="card-text">بازی نه تنها سرگرمی بلکه یکی از مهم‌ترین ابزارهای یادگیری و رشد کودکان است...</p>
+<a href="#" class="btn btn-primary">ادامه مطلب</a>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="card">
+<img src="https://source.unsplash.com/400x250/?success,achievement" alt="موفقیت" class="card-img">
+<div class="card-body">
+<h3 class="card-title">موفقیت‌های کودکان ما</h3>
+<p class="card-text">داستان‌های الهام‌بخش از کودکانی که با وجود سختی‌ها به موفقیت‌های بزرگ رسیدند...</p>
+<a href="#" class="btn btn-primary">ادامه مطلب</a>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="card">
+<img src="https://source.unsplash.com/400x250/?education,future" alt="آینده آموزش" class="card-img">
+<div class="card-body">
+<h3 class="card-title">آموزش در عصر دیجیتال</h3>
+<p class="card-text">چگونه فناوری می‌تواند به کودکان محروم در دسترسی به آموزش کیفی کمک کند...</p>
+<a href="#" class="btn btn-primary">ادامه مطلب</a>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-slide">
+<div class="card">
+<img src="https://source.unsplash.com/400x250/?volunteer,help" alt="داوطلبی" class="card-img">
+<div class="card-body">
+<h3 class="card-title">چرا داوطلب شویم؟</h3>
+<p class="card-text">فواید داوطلبی برای جامعه و تاثیر مثبت آن بر زندگی شخصی داوطلبان...</p>
+<a href="#" class="btn btn-primary">ادامه مطلب</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>فعالیت‌های سازمان</h2>
+</div>
+
+<div class="row">
+<div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+<div class="activity-card">
+<div class="activity-icon">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<h4>آموزش رایگان</h4>
+<p>کلاس‌های تقویتی و آموزش مهارت‌های زندگی برای بیش از 1000 کودک</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+<div class="activity-card">
+<div class="activity-icon">
+<i class="fas fa-home"></i>
+</div>
+<h4>مسکن امن</h4>
+<p>تامین سرپناه مناسب و امن برای کودکان بی‌سرپرست در 5 مرکز</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+<div class="activity-card">
+<div class="activity-icon">
+<i class="fas fa-heartbeat"></i>
+</div>
+<h4>خدمات درمانی</h4>
+<p>ارائه خدمات پزشکی و دندانپزشکی رایگان با همکاری پزشکان داوطلب</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+<div class="activity-card">
+<div class="activity-icon">
+<i class="fas fa-palette"></i>
+</div>
+<h4>هنر و خلاقیت</h4>
+<p>کارگاه‌های هنری، موسیقی و ورزش برای رشد استعدادهای کودکان</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section" id="campaign" style="background: #f8f9fa;">
+<div class="container">
+<div class="section-title">
+<h2>کمپین‌های جاری</h2>
+</div>
+
+<div class="row">
+<div class="col-md-6 mb-4" data-aos="fade-right">
+<div class="campaign-progress">
+<h4>کمپین لبخند - تامین لوازم‌التحریر</h4>
+<p>هدف: تامین 10,000 بسته لوازم‌التحریر برای دانش‌آموزان</p>
+<div class="progress-custom">
+<div class="progress-bar-custom" style="width: 75%;">75%</div>
+</div>
+<div class="d-flex justify-content-between">
+<span>7,500 بسته تامین شده</span>
+<span>هدف: 10,000 بسته</span>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 mb-4" data-aos="fade-left">
+<div class="campaign-progress">
+<h4>کمپین گرمای مهر - تامین لباس زمستانی</h4>
+<p>هدف: جمع‌آوری 5 میلیارد ریال برای خرید لباس گرم</p>
+<div class="progress-custom">
+<div class="progress-bar-custom" style="width: 45%;">45%</div>
+</div>
+<div class="d-flex justify-content-between">
+<span>2.25 میلیارد ریال</span>
+<span>هدف: 5 میلیارد ریال</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="kindness-wall">
+<div class="container">
+<div class="section-title">
+<h2>دیوار مهربانی</h2>
+</div>
+
+<div class="kindness-messages">
+<div class="kindness-card" data-aos="zoom-in">
+<p>"امیدوارم لبخند همیشه بر لبان کودکان باشد"</p>
+<small>- مریم احمدی</small>
+</div>
+
+<div class="kindness-card" data-aos="zoom-in" data-aos-delay="100">
+<p>"هر کودکی حق دارد رویاهایش را دنبال کند"</p>
+<small>- علی رضایی</small>
+</div>
+
+<div class="kindness-card" data-aos="zoom-in" data-aos-delay="200">
+<p>"با هم می‌توانیم آینده‌ای روشن بسازیم"</p>
+<small>- فاطمه کریمی</small>
+</div>
+
+<div class="kindness-card" data-aos="zoom-in" data-aos-delay="300">
+<p>"کمک کوچک من، لبخند بزرگ آنها"</p>
+<small>- حسین محمدی</small>
+</div>
+</div>
+
+<div class="text-center mt-4">
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kindnessModal">
+<i class="fas fa-pen"></i> پیام شما
+</button>
+</div>
+</div>
+</section>
+
+
+<section class="child-of-month">
+<div class="container">
+<div class="section-title">
+<h2 style="color: white;">کودک ماه</h2>
+</div>
+
+<div class="child-profile" data-aos="fade-up">
+<img src="https://source.unsplash.com/300x300/?child,smile" alt="سارا - کودک ماه" class="child-image">
+<div class="child-info">
+<h3>سارا محمدی</h3>
+<p>سارا 12 ساله با وجود از دست دادن والدینش در سن 5 سالگی، امروز یکی از دانش‌آموزان ممتاز ماست. او در المپیاد ریاضی استان رتبه سوم را کسب کرد و آرزو دارد مهندس شود.</p>
+<p>"من می‌خواهم بزرگ شوم و به کودکان دیگری که مثل من هستند کمک کنم."</p>
+<div class="btn btn-success mt-3">
+<i class="fas fa-users"></i> در این لحظه 47 کودک در کلاس هستند
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>لینک‌های مرتبط</h2>
+</div>
+
+<div class="row">
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#" class="card link-card">
+<i class="fas fa-university fa-3x" style="color: var(--primary-blue);"></i>
+<h5>وزارت آموزش و پرورش</h5>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#" class="card link-card">
+<i class="fas fa-hands-helping fa-3x" style="color: var(--primary-green);"></i>
+<h5>سازمان بهزیستی</h5>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#" class="card link-card">
+<i class="fas fa-child fa-3x" style="color: var(--primary-yellow);"></i>
+<h5>یونیسف ایران</h5>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-6 mb-4">
+<a href="#" class="card link-card">
+<i class="fas fa-heart fa-3x" style="color: #e74c3c;"></i>
+<h5>انجمن‌های خیریه</h5>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-content">
+
+<div class="footer-section">
+<h4>درباره آینده روشن</h4>
+<p>انجمن آینده روشن با هدف حمایت از کودکان بی‌سرپرست و ایجاد فرصت‌های برابر برای آنان فعالیت می‌کند.</p>
+<div class="social-links">
+<a href="#" aria-label="فیسبوک"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+<a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+<a href="#" aria-label="یوتیوب"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+
+
+<div class="footer-section">
+<h4>لینک‌های سریع</h4>
+<ul>
+<li><a href="about.html">معرفی سازمان</a></li>
+<li><a href="calendar.html">برنامه‌های آینده</a></li>
+<li><a href="membership.html">عضویت در انجمن</a></li>
+<li><a href="#gallery">گالری تصاویر</a></li>
+</ul>
+</div>
+
+
+<div class="footer-section">
+<h4>راه‌های کمک</h4>
+<ul>
+<li><a href="#donate">کمک نقدی</a></li>
+<li><a href="#donate-items">اهدای لوازم</a></li>
+<li><a href="membership.html">حامی شوید</a></li>
+<li><a href="#volunteer">داوطلب شوید</a></li>
+</ul>
+</div>
+
+
+<div class="footer-section">
+<h4>اطلاعات تماس</h4>
+<ul>
+<li><i class="fas fa-map-marker-alt"></i> تهران، خیابان ولیعصر، پلاک 123</li>
+<li><i class="fas fa-phone"></i> 021-12345678</li>
+<li><i class="fas fa-envelope"></i> info@ayandehroshan.org</li>
+<li><i class="fas fa-clock"></i> شنبه تا چهارشنبه: 9 تا 17</li>
+</ul>
+</div>
+</div>
+
+
+<div class="footer-bottom">
+<p>&copy; 1403 انجمن آینده روشن. تمامی حقوق محفوظ است.</p>
+</div>
+</div>
+</footer>
+
+
+<button class="scroll-to-top" aria-label="بازگشت به بالا">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+
+<button class="dark-mode-toggle" aria-label="تغییر حالت روز و شب">
+<i class="fas fa-moon"></i>
+<i class="fas fa-sun"></i>
+</button>
+
+
+<div class="mobile-menu">
+<div class="mobile-menu-header">
+<img src="images/logo.png" alt="لوگو">
+<button class="mobile-menu-close">
+<i class="fas fa-times"></i>
+</button>
+</div>
+<ul class="mobile-menu-list">
+<li><a href="index.html">صفحه اصلی</a></li>
+<li><a href="about.html">معرفی سازمان</a></li>
+<li><a href="team.html">مدیران</a></li>
+<li><a href="calendar.html">تقویم فعالیت‌ها</a></li>
+<li><a href="membership.html">عضویت</a></li>
+<li><a href="contact-form.html">ارتباط با ما</a></li>
+<li><a href="contact.html">تماس با ما</a></li>
+</ul>
+</div>
+
+
+<div class="modal fade" id="kindnessModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">پیام مهربانی شما</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<form>
+<div class="mb-3">
+<label class="form-label">نام شما</label>
+<input type="text" class="form-control" required>
+</div>
+<div class="mb-3">
+<label class="form-label">پیام مهربانی</label>
+<textarea class="form-control" rows="3" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">ارسال پیام</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+
+<script>
+
+AOS.init({
+duration: 1000,
+once: true,
+offset: 100
+});
+
+
+const heroSwiper = new Swiper('.heroSwiper', {
+loop: true,
+autoplay: {
+delay: 5000,
+disableOnInteraction: false,
+},
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+},
+});
+
+
+const articlesSwiper = new Swiper('.articlesSwiper', {
+slidesPerView: 1,
+spaceBetween: 30,
+loop: true,
+autoplay: {
+delay: 3000,
+disableOnInteraction: false,
+},
+navigation: {
+nextEl: '.articlesSwiper .swiper-button-next',
+prevEl: '.articlesSwiper .swiper-button-prev',
+},
+breakpoints: {
+640: {
+slidesPerView: 2,
+},
+768: {
+slidesPerView: 3,
+},
+1024: {
+slidesPerView: 4,
+},
+},
+});
+
+
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+const body = document.body;
+
+
+if (localStorage.getItem('darkMode') === 'true') {
+body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', () => {
+body.classList.toggle('dark-mode');
+localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+});
+
+
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+mobileMenuToggle.addEventListener('click', () => {
+mobileMenu.style.display = 'block';
+setTimeout(() => {
+mobileMenu.classList.add('active');
+}, 10);
+});
+
+mobileMenuClose.addEventListener('click', () => {
+mobileMenu.classList.remove('active');
+setTimeout(() => {
+mobileMenu.style.display = 'none';
+}, 300);
+});
+
+
+const scrollToTop = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+scrollToTop.classList.add('visible');
+} else {
+scrollToTop.classList.remove('visible');
+}
+});
+
+scrollToTop.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+
+
+const counters = document.querySelectorAll('.counter');
+const observerOptions = {
+threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const counter = entry.target;
+const target = parseInt(counter.getAttribute('data-target'));
+
+const countUp = new CountUp(counter, target, {
+duration: 2,
+useGrouping: true,
+separator: ',',
+});
+
+countUp.start();
+observer.unobserve(counter);
+}
+});
+}, observerOptions);
+
+counters.forEach(counter => {
+observer.observe(counter);
+});
+</script>
+</body>
+</html>
