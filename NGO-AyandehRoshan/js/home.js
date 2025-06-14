@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://via.placeholder.com/400x300/9b59b6/ffffff?text=مقاله+3'
         ],
         slider: [
-            'https://via.placeholder.com/1920x600/3498db/ffffff?text=اسلاید+1',
-            'https://via.placeholder.com/1920x600/f1c40f/ffffff?text=اسلاید+2',
+            'images/slider/eshgh.webp',
+            'images/slider/amoozash.jpg',
             'images/slider/salamat.jpg'
         ],
         sponsors: [
