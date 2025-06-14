@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'images/slider/salamat.jpg'
         ],
         sponsors: [
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+1',
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+2',
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+3',
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+4',
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+5',
-            'https://via.placeholder.com/200x100/cccccc/666666?text=حامی+6'
+            'images/articles/sp1.jpg',
+            'images/articles/sp2.gif.crdownload',
+            'images/articles/sp3.png',
+            'images/articles/sp4.png',
+            'images/articles/sp5.png',
+            'images/articles/sp6.png'
         ]
     };
     
