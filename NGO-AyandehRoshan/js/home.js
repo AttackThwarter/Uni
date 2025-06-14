@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const placeholderImages = {
         articles: [
-            'https://via.placeholder.com/400x300/3498db/ffffff?text=مقاله+1',
-            'https://via.placeholder.com/400x300/2ecc71/ffffff?text=مقاله+2',
-            'https://via.placeholder.com/400x300/9b59b6/ffffff?text=مقاله+3'
+            'images/articles/bazi.jpg',
+            'images/articles/taghzie.webp',
+            'images/articles/maharat.jpg'
         ],
         slider: [
             'images/slider/eshgh.webp',
