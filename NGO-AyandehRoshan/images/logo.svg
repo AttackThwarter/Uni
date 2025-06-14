@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- گروه اصلی لوگو -->
+  <g id="logo-group">
+    <!-- خورشید (نماد آینده روشن) -->
+    <circle cx="50" cy="50" r="25" fill="#f1c40f" opacity="0.3"/>
+    <circle cx="50" cy="50" r="20" fill="#f1c40f">
+      <animate attributeName="r" values="20;22;20" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- پرتوهای خورشید -->
+    <g stroke="#f1c40f" stroke-width="3" stroke-linecap="round">
+      <line x1="50" y1="15" x2="50" y2="5">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="75" y1="25" x2="82" y2="18">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.25s" repeatCount="indefinite"/>
+      </line>
+      <line x1="85" y1="50" x2="95" y2="50">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="75" y1="75" x2="82" y2="82">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.75s" repeatCount="indefinite"/>
+      </line>
+      <line x1="50" y1="85" x2="50" y2="95">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </line>
+      <line x1="25" y1="75" x2="18" y2="82">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1.25s" repeatCount="indefinite"/>
+      </line>
+      <line x1="15" y1="50" x2="5" y2="50">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </line>
+      <line x1="25" y1="25" x2="18" y2="18">
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1.75s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    
+    <!-- کودکان (سه سیلوئت) -->
+    <!-- کودک وسط -->
+    <g transform="translate(50, 50)">
+      <circle cx="0" cy="-5" r="8" fill="#3498db"/>
+      <path d="M -10 5 Q -8 15 -5 20 L -2 20 L -2 35 L 2 35 L 2 20 L 5 20 Q 8 15 10 5 Z" fill="#3498db"/>
+      <!-- دست‌های بالا رفته -->
+      <path d="M -8 8 L -12 -5 M 8 8 L 12 -5" stroke="#3498db" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- کودک چپ -->
+    <g transform="translate(30, 55)">
+      <circle cx="0" cy="-5" r="6" fill="#2ecc71"/>
+      <path d="M -7 3 Q -5 10 -3 15 L -1 15 L -1 25 L 1 25 L 1 15 L 3 15 Q 5 10 7 3 Z" fill="#2ecc71"/>
+    </g>
+    
+    <!-- کودک راست -->
+    <g transform="translate(70, 55)">
+      <circle cx="0" cy="-5" r="6" fill="#9b59b6"/>
+      <path d="M -7 3 Q -5 10 -3 15 L -1 15 L -1 25 L 1 25 L 1 15 L 3 15 Q 5 10 7 3 Z" fill="#9b59b6"/>
+    </g>
+    
+    <!-- متن فارسی -->
+    <text x="110" y="45" font-family="Vazirmatn, Tahoma, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">آینده روشن</text>
+    
+    <!-- متن انگلیسی -->
+    <text x="110" y="65" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Ayandeh Roshan Foundation</text>
+    
+    <!-- خط زیر لوگو -->
+    <rect x="110" y="72" width="160" height="2" fill="url(#gradient)" rx="1"/>
+  </g>
+  
+  <!-- تعریف گرادیان -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#f1c40f;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
