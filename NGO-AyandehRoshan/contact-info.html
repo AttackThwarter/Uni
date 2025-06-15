@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - انجمن خیریه آینده روشن</title>
+
+        
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    
+    
+    <style>
+        
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #FF6B6B;
+            --accent-color: #4ECDC4;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --shadow-hover: 0 10px 30px rgba(0,0,0,0.15);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #004080 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('./images/activities/tamas.webp') center/cover;
+            opacity: 0.2;
+        }
+
+        .page-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .breadcrumb-item {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: "/";
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        
+        .contact-info-section {
+            padding: 80px 0;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            height: 100%;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .info-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .info-card .btn {
+            margin-top: 15px;
+        }
+
+        
+        .map-section {
+            padding: 40px 0;
+            background: var(--bg-light);
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            max-width: 300px;
+        }
+
+        .map-overlay h5 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .map-overlay p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        
+        .branches-section {
+            padding: 80px 0;
+        }
+
+        .branch-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .branch-card:hover {
+            transform: translateX(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .branch-card h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .branch-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .branch-info i {
+            color: var(--accent-color);
+            margin-left: 10px;
+            width: 20px;
+        }
+
+        
+        .quick-access-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .access-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            height: 100%;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .access-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .access-card .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), #3DBDB6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .access-card i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .access-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .access-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        
+        .working-hours-section {
+            padding: 80px 0;
+        }
+
+        .hours-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        .hours-item .day {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .hours-item .time {
+            color: var(--text-light);
+        }
+
+        .hours-item.closed .time {
+            color: var(--secondary-color);
+        }
+
+
+        
+        .leaflet-popup-content-wrapper {
+            border-radius: 10px;
+            font-family: Vazirmatn, sans-serif;
+        }
+
+        .leaflet-popup-content {
+            margin: 13px 19px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .leaflet-container {
+            font-family: Vazirmatn, sans-serif;
+        }
+
+        .custom-div-icon {
+            background: transparent;
+            border: none;
+        }
+
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .map-overlay {
+                position: static;
+                max-width: 100%;
+                margin-top: 20px;
+                border-radius: var(--border-radius);
+            }
+            
+            #map {
+                height: 300px;
+            }
+            
+            .floating-actions {
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" alt="انجمن آینده روشن">
+                </a>
+                
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">تیم مدیریت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">تقویم برنامه‌ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="membership.html">عضویت</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                ارتباط با ما
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="contact-info.html">فرم تماس</a></li>
+                                <li><a class="dropdown-item" href="contact.html">اطلاعات تماس</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>تماس با ما</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: rgba(255,255,255,0.8);">صفحه اصلی</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">تماس با ما</li>
+                </ol>
+            </nav>
+            <div class="office-status mt-3" id="officeStatus">
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-card animate-on-scroll">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>آدرس دفتر مرکزی</h4>
+                        <p>تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر، کوچه شهید احمدی، پلاک ۱۲۳</p>
+                        <a href="#map-section" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-directions"></i> مسیریابی
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card animate-on-scroll">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>شماره تماس</h4>
+                        <p><strong>دفتر مرکزی:</strong> <span class="copy-on-click" data-copy="02112345678">۰۲۱-۱۲۳۴۵۶۷۸</span></p>
+                        <p><strong>پشتیبانی:</strong> <span class="copy-on-click" data-copy="02187654321">۰۲۱-۸۷۶۵۴۳۲۱</span></p>
+                        <p><strong>فکس:</strong> <span class="copy-on-click" data-copy="02112345679">۰۲۱-۱۲۳۴۵۶۷۹</span></p>
+                        <p><strong>پیامک:</strong> <span class="copy-on-click" data-copy="30001234">۳۰۰۰۱۲۳۴</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card animate-on-scroll">
+                        <i class="fas fa-envelope"></i>
+                        <h4>پست الکترونیک</h4>
+                        <p><strong>عمومی:</strong> <span class="copy-on-click" data-copy="info@ayandehroshan.org">info@ayandehroshan.org</span></p>
+                        <p><strong>روابط عمومی:</strong> <span class="copy-on-click" data-copy="pr@ayandehroshan.org">pr@ayandehroshan.org</span></p>
+                        <p><strong>امور مالی:</strong> <span class="copy-on-click" data-copy="finance@ayandehroshan.org">finance@ayandehroshan.org</span></p>
+                        <p><strong>داوطلبان:</strong> <span class="copy-on-click" data-copy="volunteer@ayandehroshan.org">volunteer@ayandehroshan.org</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="map-section" class="map-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <div id="map"></div>
+                        <div class="map-overlay">
+                            <h5>دفتر مرکزی انجمن خیریه آینده روشن</h5>
+                            <p><i class="fas fa-map-marker-alt"></i> تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر</p>
+                            <button class="btn btn-primary btn-sm" onclick="openInGoogleMaps()">
+                                <i class="fas fa-external-link-alt"></i> باز کردن در Google Maps
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="branches-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary">شعبه‌ها و دفاتر نمایندگی</h2>
+                <p class="lead text-muted">انجمن خیریه آینده روشن در شهرهای مختلف کشور</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="branch-card animate-on-scroll">
+                        <h5><i class="fas fa-building"></i> شعبه اصفهان</h5>
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>اصفهان، خیابان چهارباغ، کوچه گلستان، پلاک ۴۵</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span class="copy-on-click" data-copy="03132223344">۰۳۱-۳۲۲۲۳۳۴۴</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-clock"></i>
+                            <span>شنبه تا چهارشنبه: ۸:۳۰ - ۱۷:۰۰</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3" onclick="showBranchOnMap('isfahan')">
+                            <i class="fas fa-map"></i> نمایش روی نقشه
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="branch-card animate-on-scroll">
+                        <h5><i class="fas fa-building"></i> شعبه شیراز</h5>
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>شیراز، بلوار زند، نبش کوچه ۱۵</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span class="copy-on-click" data-copy="07136363738">۰۷۱-۳۶۳۶۳۷۳۸</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-clock"></i>
+                            <span>شنبه تا چهارشنبه: ۸:۰۰ - ۱۶:۳۰</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3" onclick="showBranchOnMap('shiraz')">
+                            <i class="fas fa-map"></i> نمایش روی نقشه
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="branch-card animate-on-scroll">
+                        <h5><i class="fas fa-building"></i> شعبه مشهد</h5>
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>مشهد، بلوار سجاد، میدان احمدآباد، ساختمان نور</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span class="copy-on-click" data-copy="05137654321">۰۵۱-۳۷۶۵۴۳۲۱</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-clock"></i>
+                            <span>شنبه تا چهارشنبه: ۹:۰۰ - ۱۷:۳۰</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3" onclick="showBranchOnMap('mashhad')">
+                            <i class="fas fa-map"></i> نمایش روی نقشه
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="branch-card animate-on-scroll">
+                        <h5><i class="fas fa-building"></i> شعبه تبریز</h5>
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>تبریز، خیابان امام، کوی ولیعصر، پلاک ۸۷</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span class="copy-on-click" data-copy="04133334455">۰۴۱-۳۳۳۳۴۴۵۵</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-clock"></i>
+                            <span>شنبه تا چهارشنبه: ۸:۳۰ - ۱۶:۰۰</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3" onclick="showBranchOnMap('tabriz')">
+                            <i class="fas fa-map"></i> نمایش روی نقشه
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="quick-access-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary">دسترسی سریع</h2>
+                <p class="lead text-muted">راه‌های ارتباطی فوری با انجمن</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="access-card animate-on-scroll">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>پشتیبانی تلفنی</h4>
+                        <p>تماس مستقیم با واحد پشتیبانی</p>
+                        <a href="tel:02112345678" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> تماس بگیرید
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="access-card animate-on-scroll">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>چت آنلاین</h4>
+                        <p>گفتگوی زنده با کارشناسان ما</p>
+                        <button class="btn btn-primary" onclick="startChat()">
+                            <i class="fas fa-comment-dots"></i> شروع گفتگو
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="access-card animate-on-scroll">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>مشاوره ویدئویی</h4>
+                        <p>رزرو وقت مشاوره آنلاین</p>
+                        <button class="btn btn-primary" onclick="bookVideoCall()">
+                            <i class="fas fa-calendar-check"></i> رزرو وقت
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="working-hours-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold text-primary mb-4">ساعات کاری</h2>
+                    <div class="hours-card">
+                        <div class="hours-item">
+                            <span class="day">شنبه تا چهارشنبه</span>
+                            <span class="time">۸:۳۰ صبح - ۵:۳۰ عصر</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">پنج‌شنبه</span>
+                            <span class="time">۸:۳۰ صبح - ۱:۰۰ بعد از ظهر</span>
+                        </div>
+                        <div class="hours-item closed">
+                            <span class="day">جمعه و تعطیلات رسمی</span>
+                            <span class="time">تعطیل</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="text-primary mb-3">ساعات کاری واحدهای ویژه:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> واحد امداد: ۲۴ ساعته</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> پشتیبانی تلفنی: ۸ صبح تا ۸ شب</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> واحد مالی: شنبه تا چهارشنبه ۹ صبح تا ۴ عصر</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/activities/saat.jpg" alt="ساعات کاری" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>درباره انجمن آینده روشن</h4>
+                        <p>انجمن آینده روشن با هدف حمایت از کودکان بی‌سرپرست و کم‌برخوردار فعالیت می‌کند. ما معتقدیم هر کودکی شایسته داشتن فرصت‌های برابر برای رشد و شکوفایی است.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                            <a href="#" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="توییتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="یوتیوب"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>دسترسی سریع</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html"><i class="fas fa-angle-left ms-2"></i>درباره ما</a></li>
+                            <li><a href="team.html"><i class="fas fa-angle-left ms-2"></i>تیم مدیریت</a></li>
+                            <li><a href="calendar.html"><i class="fas fa-angle-left ms-2"></i>برنامه‌های پیش رو</a></li>
+                            <li><a href="membership.html"><i class="fas fa-angle-left ms-2"></i>عضویت در انجمن</a></li>
+                            <li><a href="#"><i class="fas fa-angle-left ms-2"></i>گزارش‌های مالی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>اطلاعات تماس</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fas fa-map-marker-alt ms-2"></i>
+                                 تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر
+                            </li>
+                            <li>
+                                <i class="fas fa-phone ms-2"></i>
+                                <a href="tel:02112345678" dir="ltr">021-12345678</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope ms-2"></i>
+                                <a href="mailto:info@ayandehroshan.org">info@ayandehroshan.org</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock ms-2"></i>
+                                شنبه تا چهارشنبه: ۹ تا ۱۷
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>خبرنامه</h4>
+                        <p>برای دریافت آخرین اخبار و برنامه‌های انجمن، در خبرنامه ما عضو شوید.</p>
+                        <form class="mt-3" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="ایمیل شما" required>
+                                <button class="btn btn-warning" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="mb-0">
+                    © <span id="currentYear">۱۴۰۳</span> انجمن آینده روشن - تمامی حقوق محفوظ است | 
+                    طراحی و توسعه با <i class="fas fa-heart text-danger animate-heartbeat"></i> برای کودکان ایران
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+<div class="floating-buttons">
+    
+    
+    <a href="#" id="scrollTopBtn" class="fab-btn fab-primary" title="بازگشت به بالا">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            
+            let map;
+            let markers = [];
+            let branchesData = {
+                tehran: {
+                    coords: [35.6892, 51.3890],
+                    name: 'دفتر مرکزی تهران',
+                    address: 'تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر، کوچه شهید احمدی، پلاک ۱۲۳',
+                    phone: '۰۲۱-۱۲۳۴۵۶۷۸'
+                },
+                isfahan: {
+                    coords: [32.6546, 51.6680],
+                    name: 'شعبه اصفهان',
+                    address: 'اصفهان، خیابان چهارباغ، کوچه گلستان',
+                    phone: '۰۳۱-۳۲۲۲۳۳۴۴'
+                },
+                shiraz: {
+                    coords: [29.5918, 52.5836],
+                    name: 'شعبه شیراز',
+                    address: 'شیراز، بلوار زند، نبش کوچه ۱۵',
+                    phone: '۰۷۱-۳۶۳۶۳۷۳۸'
+                },
+                mashhad: {
+                    coords: [36.2605, 59.6168],
+                    name: 'شعبه مشهد',
+                    address: 'مشهد، بلوار سجاد، میدان احمدآباد',
+                    phone: '۰۵۱-۳۷۶۵۴۳۲۱'
+                },
+                tabriz: {
+                    coords: [38.0962, 46.2738],
+                    name: 'شعبه تبریز',
+                    address: 'تبریز، خیابان امام، کوی ولیعصر',
+                    phone: '۰۴۱-۳۳۳۳۴۴۵۵'
+                }
+            };
+            
+            function initializeMap() {
+                try {
+                    
+                    const iranCenter = [32.4279, 53.6880];
+                    
+                    
+                    map = L.map('map', {
+                        center: iranCenter,
+                        zoom: 6,
+                        zoomControl: false
+                    });
+                    
+                    
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors',
+                        maxZoom: 19
+                    }).addTo(map);
+                    
+                    
+                    L.control.zoom({
+                        position: 'bottomleft',
+                        zoomInTitle: 'بزرگنمایی',
+                        zoomOutTitle: 'کوچک‌نمایی'
+                    }).addTo(map);
+                    
+                    
+                    Object.keys(branchesData).forEach(city => {
+                        const branch = branchesData[city];
+                        const isMainOffice = city === 'tehran';
+                        
+                        
+                        const icon = L.divIcon({
+                            html: `<i class="fas ${isMainOffice ? 'fa-building' : 'fa-map-marker-alt'}" style="color: ${isMainOffice ? '#003366' : '#FF6B6B'}; font-size: ${isMainOffice ? '24px' : '20px'};"></i>`,
+                            iconSize: [isMainOffice ? 30 : 25, isMainOffice ? 30 : 25],
+                            className: 'custom-div-icon'
+                        });
+                        
+                        
+                        const marker = L.marker(branch.coords, {icon: icon}).addTo(map);
+                        
+                        
+                        const popupContent = `
+                            <div style="text-align: center; font-family: Vazirmatn; direction: rtl; min-width: 200px;">
+                                <h6 style="color: #003366; margin-bottom: 10px; font-weight: bold;">${branch.name}</h6>
+                                <p style="margin: 5px 0; font-size: 0.9em;"><i class="fas fa-map-marker-alt"></i> ${branch.address}</p>
+                                <p style="margin: 5px 0; font-size: 0.9em;"><i class="fas fa-phone"></i> ${branch.phone}</p>
+                                <button class="btn btn-sm btn-primary mt-2" onclick="getDirections(${branch.coords[0]}, ${branch.coords[1]})">
+                                    <i class="fas fa-directions"></i> مسیریابی
+                                </button>
+                            </div>
+                        `;
+                        
+                        marker.bindPopup(popupContent, {maxWidth: 300});
+                        markers.push({marker: marker, coords: branch.coords, city: city});
+                    });
+                    
+                    
+                    const ResetViewControl = L.Control.extend({
+                        options: {
+                            position: 'topleft'
+                        },
+                        onAdd: function(map) {
+                            const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+                            container.innerHTML = '<a href="#" title="نمایش کل ایران" style="width: 34px; height: 34px; line-height: 34px; text-align: center; display: block; background: white;"><i class="fas fa-home"></i></a>';
+                            container.onclick = function(e) {
+                                e.preventDefault();
+                                map.setView(iranCenter, 6);
+                                return false;
+                            };
+                            return container;
+                        }
+                    });
+                    
+                    map.addControl(new ResetViewControl());
+                    
+                    
+                    L.control.scale({
+                        position: 'bottomright',
+                        metric: true,
+                        imperial: false
+                    }).addTo(map);
+                    
+                } catch (error) {
+                    console.error('Error initializing map:', error);
+                }
+            }
+            
+            
+            if (document.getElementById('map')) {
+                setTimeout(initializeMap, 100);
+            }
+            
+            
+            window.showBranchOnMap = function(city) {
+                if (!map || !branchesData[city]) return;
+                
+                const branch = branchesData[city];
+                map.flyTo(branch.coords, 13, {
+                    duration: 2
+                });
+                
+                
+                const branchMarker = markers.find(m => m.city === city);
+                if (branchMarker) {
+                    branchMarker.marker.openPopup();
+                }
+                
+                
+                document.getElementById('map-section').scrollIntoView({ behavior: 'smooth' });
+            };
+            
+            
+            window.openInGoogleMaps = function() {
+                const coords = branchesData.tehran.coords;
+                window.open(`https://www.google.com/maps?q=${coords[0]},${coords[1]}`, '_blank');
+            };
+            
+            
+            window.getDirections = function(lat, lng) {
+                window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`, '_blank');
+            };
+            
+            
+            window.startChat = function() {
+                Swal.fire({
+                    title: 'چت آنلاین',
+                    text: 'در حال اتصال به پشتیبان...',
+                    icon: 'info',
+                    timer: 2000,
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                }).then(() => {
+                    Swal.fire({
+                        title: 'چت آنلاین',
+                        html: `
+                            <div class="chat-simulation">
+                                <div class="chat-message support">
+                                    <strong>پشتیبان:</strong> سلام! چطور می‌توانم کمکتان کنم؟
+                                </div>
+                                <div class="mt-3">
+                                    <input type="text" class="form-control" placeholder="پیام خود را بنویسید..." id="chatInput">
+                                </div>
+                            </div>
+                        `,
+                        showCancelButton: true,
+                        confirmButtonText: 'ارسال',
+                        cancelButtonText: 'بستن',
+                        confirmButtonColor: '#003366'
+                    });
+                });
+            };
+            
+            
+            window.bookVideoCall = function() {
+                Swal.fire({
+                    title: 'رزرو وقت مشاوره ویدئویی',
+                    html: `
+                        <form id="videoCallForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="شماره تماس" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control" required>
+                                    <option value="">موضوع مشاوره را انتخاب کنید</option>
+                                    <option>مشاوره عمومی</option>
+                                    <option>امور مالی و حسابداری</option>
+                                    <option>همکاری و داوطلبی</option>
+                                    <option>سایر موارد</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </form>
+                    `,
+                    showCancelButton: true,
+                    confirmButtonText: 'رزرو وقت',
+                    cancelButtonText: 'انصراف',
+                    confirmButtonColor: '#003366',
+                    preConfirm: () => {
+                        const form = document.getElementById('videoCallForm');
+                        if (!form.checkValidity()) {
+                            form.reportValidity();
+                            return false;
+                        }
+                        return true;
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'رزرو انجام شد',
+                            text: 'درخواست شما ثبت شد. همکاران ما به زودی با شما تماس خواهند گرفت.',
+                            confirmButtonColor: '#003366'
+                        });
+                    }
+                });
+            };
+            
+            
+            document.querySelectorAll('.copy-on-click').forEach(element => {
+                element.style.cursor = 'pointer';
+                element.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = 'کپی شد!';
+                        this.style.color = '#4ECDC4';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.color = '';
+                        }, 2000);
+                    });
+                });
+            });
+            
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+            
+            
+            function checkIfOpen() {
+                const now = new Date();
+                const day = now.getDay();
+                const hour = now.getHours();
+                const minute = now.getMinutes();
+                const time = hour + minute / 60;
+                
+                let isOpen = false;
+                let statusText = '';
+                
+                if (day >= 6 || day === 5) { 
+                    isOpen = false;
+                    statusText = 'تعطیل - ';
+                    if (day === 5) {
+                        statusText += 'امروز جمعه است';
+                    } else {
+                        statusText += 'آخر هفته';
+                    }
+                } else if (day === 4) { 
+                    if (time >= 8.5 && time < 13) {
+                        isOpen = true;
+                        statusText = 'باز - تا ساعت ۱:۰۰ بعد از ظهر';
+                    } else {
+                        isOpen = false;
+                        statusText = 'تعطیل - ساعات کاری پنج‌شنبه: ۸:۳۰ صبح تا ۱:۰۰ بعد از ظهر';
+                    }
+                } else { 
+                    if (time >= 8.5 && time < 17.5) {
+                        isOpen = true;
+                        statusText = 'باز - تا ساعت ۵:۳۰ عصر';
+                    } else {
+                        isOpen = false;
+                        statusText = 'تعطیل - ساعات کاری: ۸:۳۰ صبح تا ۵:۳۰ عصر';
+                    }
+                }
+                
+                const statusElement = document.getElementById('officeStatus');
+                if (statusElement) {
+                    statusElement.innerHTML = `
+                        <span class="badge ${isOpen ? 'bg-success' : 'bg-danger'} p-2">
+                            <i class="fas fa-${isOpen ? 'door-open' : 'door-closed'} me-2"></i>
+                            ${statusText}
+                        </span>
+                    `;
+                }
+            }
+            
+            checkIfOpen();
+            setInterval(checkIfOpen, 60000); 
+            
+            
+            document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'عضویت موفق',
+                    text: 'ایمیل شما با موفقیت در خبرنامه ثبت شد.',
+                    confirmButtonColor: '#003366'
+                });
+                
+                this.reset();
+            });
+            
+            
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.style.display = 'flex';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            
+            document.querySelector('.dark-mode-toggle').addEventListener('click', function(e) {
+                e.preventDefault();
+                Swal.fire({
+                    icon: 'info',
+                    title: 'حالت شب',
+                    text: 'این قابلیت به زودی فعال خواهد شد.',
+                    confirmButtonColor: '#003366'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

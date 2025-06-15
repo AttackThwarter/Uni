@@ -1,0 +1,429 @@
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.info-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-numbers p,
+.email-list p {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.contact-numbers strong,
+.email-list strong {
+    color: #333;
+}
+
+
+.map-section {
+    position: relative;
+    height: 500px;
+}
+
+.map-container {
+    position: relative;
+    height: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.map-info {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.map-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.map-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+.branches-section {
+    background: #f8f9fa;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.branch-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.branch-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.branch-header i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.branch-header h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.branch-info p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.branch-info i {
+    width: 20px;
+    color: var(--primary-color);
+    margin-left: 8px;
+}
+
+
+.access-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.access-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.access-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.access-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.access-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.access-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.access-card .btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+
+.working-hours-section {
+    background: #f8f9fa;
+}
+
+.hours-table {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-row .day {
+    font-weight: 600;
+    color: #333;
+}
+
+.hours-row .time {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.special-hours {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.special-hours h5 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.special-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.special-hours li {
+    padding: 8px 0;
+    padding-right: 25px;
+    position: relative;
+}
+
+.special-hours li::before {
+    content: "•";
+    position: absolute;
+    right: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.hours-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+}
+
+.leaflet-popup-content {
+    margin: 15px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .map-overlay {
+        position: static;
+        margin: 20px;
+    }
+    
+    .map-info {
+        max-width: 100%;
+    }
+    
+    .map-section {
+        height: 400px;
+    }
+    
+    .info-card {
+        margin-bottom: 30px;
+    }
+    
+    .hours-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hours-row .day {
+        margin-bottom: 10px;
+    }
+}
+
+
+body.dark-mode .info-card,
+body.dark-mode .branch-card,
+body.dark-mode .access-card {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+body.dark-mode .info-card h3,
+body.dark-mode .branch-header h4,
+body.dark-mode .access-card h4 {
+    color: #e2e8f0;
+}
+
+body.dark-mode .info-card p,
+body.dark-mode .branch-info p,
+body.dark-mode .access-card p {
+    color: #cbd5e0;
+}
+
+body.dark-mode .hours-table {
+    background: #2d3748;
+}
+
+body.dark-mode .hours-row {
+    border-bottom-color: #4a5568;
+}
+
+body.dark-mode .hours-row .day {
+    color: #e2e8f0;
+}
+
+body.dark-mode .special-hours {
+    background: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-mode .map-info {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-card,
+.branch-card,
+.access-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+.map-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.map-loading i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    animation: spin 2s linear infinite;
+}
+
+
+.contact-numbers p:hover,
+.email-list p:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
