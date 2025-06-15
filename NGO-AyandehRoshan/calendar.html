@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقویم برنامه‌ها - انجمن خیریه آینده روشن</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/home.css">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+  
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" alt="انجمن آینده روشن">
+                </a>
+                
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">تیم مدیریت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">تقویم برنامه‌ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="membership.html">عضویت</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                ارتباط با ما
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="contact-info.html">فرم تماس</a></li>
+                                <li><a class="dropdown-item" href="contact.html">اطلاعات تماس</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+<section class="page-header">
+<div class="page-header-overlay"></div>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h1 class="page-title">تقویم برنامه‌ها</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">صفحه اصلی / </a></li>
+<li class="breadcrumb-item active">&ensp; تقویم برنامه‌ها</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="events-tabs py-5">
+<div class="container">
+<ul class="nav nav-pills mb-4 justify-content-center" id="eventTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="upcoming-tab" data-bs-toggle="pill" 
+data-bs-target="#upcoming" type="button" role="tab">
+<i class="fas fa-calendar-check me-2"></i>برنامه‌های آینده
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" id="past-tab" data-bs-toggle="pill" 
+data-bs-target="#past" type="button" role="tab">
+<i class="fas fa-history me-2"></i>برنامه‌های گذشته
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" id="calendar-tab" data-bs-toggle="pill" 
+data-bs-target="#calendar-view" type="button" role="tab">
+<i class="fas fa-calendar-alt me-2"></i>نمای تقویم
+</button>
+</li>
+</ul>
+
+<div class="tab-content" id="eventTabsContent">
+
+<div class="tab-pane fade show active" id="upcoming" role="tabpanel">
+<div class="row g-4">
+<div class="col-md-6">
+<div class="event-card upcoming">
+<div class="event-date">
+<span class="day">۱۵</span>
+<span class="month">خرداد</span>
+</div>
+<div class="event-content">
+<span class="event-category">کارگاه آموزشی</span>
+<h4>کارگاه نقاشی کودکان</h4>
+<p><i class="fas fa-clock"></i> ۱۰:۰۰ - ۱۲:۰۰</p>
+<p><i class="fas fa-map-marker-alt"></i> سالن اصلی انجمن</p>
+<button class="btn btn-primary btn-sm" onclick="showEventDetails(1)">
+جزئیات و ثبت‌نام
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card upcoming">
+<div class="event-date">
+<span class="day">۲۲</span>
+<span class="month">خرداد</span>
+</div>
+<div class="event-content">
+<span class="event-category">جشن</span>
+<h4>جشن روز کودک</h4>
+<p><i class="fas fa-clock"></i> ۱۶:۰۰ - ۲۰:۰۰</p>
+<p><i class="fas fa-map-marker-alt"></i> پارک شهر</p>
+<button class="btn btn-primary btn-sm" onclick="showEventDetails(2)">
+جزئیات و ثبت‌نام
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card upcoming">
+<div class="event-date">
+<span class="day">۰۵</span>
+<span class="month">تیر</span>
+</div>
+<div class="event-content">
+<span class="event-category">مسابقه</span>
+<h4>مسابقه کتابخوانی</h4>
+<p><i class="fas fa-clock"></i> ۱۴:۰۰ - ۱۷:۰۰</p>
+<p><i class="fas fa-map-marker-alt"></i> کتابخانه انجمن</p>
+<button class="btn btn-primary btn-sm" onclick="showEventDetails(3)">
+جزئیات و ثبت‌نام
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card upcoming">
+<div class="event-date">
+<span class="day">۲۰</span>
+<span class="month">تیر</span>
+</div>
+<div class="event-content">
+<span class="event-category">اردو</span>
+<h4>کمپ تابستانی</h4>
+<p><i class="fas fa-clock"></i> سه روزه</p>
+<p><i class="fas fa-map-marker-alt"></i> اردوگاه آیت</p>
+<button class="btn btn-primary btn-sm" onclick="showEventDetails(4)">
+جزئیات و ثبت‌نام
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="tab-pane fade" id="past" role="tabpanel">
+<div class="row g-4">
+<div class="col-md-6">
+<div class="event-card past">
+<div class="event-date">
+<span class="day">۱۵</span>
+<span class="month">اردیبهشت</span>
+</div>
+<div class="event-content">
+<span class="event-category">همایش</span>
+<h4>همایش حقوق کودک</h4>
+<p><i class="fas fa-users"></i> ۲۵۰ شرکت‌کننده</p>
+<div class="event-gallery">
+<img src="images/gallery1.jpg" alt="تصویر همایش">
+<img src="images/gallery2.jpg" alt="تصویر همایش">
+<a href="#" class="more-photos">+۱۲ تصویر دیگر</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card past">
+<div class="event-date">
+<span class="day">۲۸</span>
+<span class="month">فروردین</span>
+</div>
+<div class="event-content">
+<span class="event-category">نمایشگاه</span>
+<h4>نمایشگاه نقاشی کودکان</h4>
+<p><i class="fas fa-palette"></i> ۸۵ اثر از ۴۵ هنرمند نوجوان</p>
+<div class="event-stats">
+<span><i class="fas fa-eye"></i> ۱,۲۰۰ بازدیدکننده</span>
+<span><i class="fas fa-star"></i> ۴.۸/۵ امتیاز</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card past">
+<div class="event-date">
+<span class="day">۱۲</span>
+<span class="month">اسفند</span>
+<span class="year">۱۴۰۳</span>
+</div>
+<div class="event-content">
+<span class="event-category">خیریه</span>
+<h4>بازارچه خیریه نوروزی</h4>
+<p><i class="fas fa-hand-holding-heart"></i> درآمد: ۸۵ میلیون تومان</p>
+<p class="text-success">صرف تهیه بسته‌های عیدی برای ۳۰۰ کودک</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="event-card past">
+<div class="event-date">
+<span class="day">۲۵</span>
+<span class="month">بهمن</span>
+<span class="year">۱۴۰۳</span>
+</div>
+<div class="event-content">
+<span class="event-category">ورزشی</span>
+<h4>المپیاد ورزشی زمستانی</h4>
+<p><i class="fas fa-medal"></i> ۳ رشته ورزشی</p>
+<p><i class="fas fa-child"></i> ۱۵۰ شرکت‌کننده از ۵ مدرسه</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="tab-pane fade" id="calendar-view" role="tabpanel">
+<div id="calendar"></div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="filters-section py-4 bg-light">
+<div class="container">
+<h3 class="text-center mb-4">فیلتر رویدادها</h3>
+<div class="row g-3">
+<div class="col-md-3">
+<select class="form-select" id="eventType">
+<option value="">همه انواع</option>
+<option value="workshop">کارگاه آموزشی</option>
+<option value="celebration">جشن و مراسم</option>
+<option value="competition">مسابقه</option>
+<option value="camp">اردو</option>
+<option value="charity">بازارچه خیریه</option>
+</select>
+</div>
+<div class="col-md-3">
+<select class="form-select" id="ageGroup">
+<option value="">همه گروه‌های سنی</option>
+<option value="kids">کودکان (۴-۱۲ سال)</option>
+<option value="teens">نوجوانان (۱۳-۱۸ سال)</option>
+<option value="all">همه سنین</option>
+</select>
+</div>
+<div class="col-md-3">
+<select class="form-select" id="location">
+<option value="">همه مکان‌ها</option>
+<option value="main">سالن اصلی انجمن</option>
+<option value="library">کتابخانه</option>
+<option value="park">پارک شهر</option>
+<option value="outdoor">فضای باز</option>
+</select>
+</div>
+<div class="col-md-3">
+<button class="btn btn-primary w-100" onclick="applyFilters()">
+<i class="fas fa-filter me-2"></i>اعمال فیلتر
+</button>
+<button class="btn btn-outline-secondary w-100 mt-2" onclick="resetFilters()">
+پاک کردن فیلتر
+</button>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="event-stats-section py-5">
+<div class="container">
+<h2 class="text-center mb-5">آمار برنامه‌های ما</h2>
+<div class="row text-center">
+<div class="col-md-3 col-sm-6 mb-4">
+<div class="stat-box">
+<i class="fas fa-calendar-check fa-3x mb-3 text-primary"></i>
+<h3 class="counter" data-target="156">0</h3>
+<p>برنامه برگزار شده</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<div class="stat-box">
+<i class="fas fa-users fa-3x mb-3 text-success"></i>
+<h3 class="counter" data-target="8500">0</h3>
+<p>شرکت‌کننده</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<div class="stat-box">
+<i class="fas fa-hands-helping fa-3x mb-3 text-warning"></i>
+<h3 class="counter" data-target="320">0</h3>
+<p>داوطلب همکار</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 mb-4">
+<div class="stat-box">
+<i class="fas fa-star fa-3x mb-3 text-danger"></i>
+<h3><span class="counter" data-target="98">0</span>%</h3>
+<p>رضایت شرکت‌کنندگان</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="cta-section py-5 bg-primary text-white">
+<div class="container text-center">
+<h2 class="mb-4 text-white">در برنامه‌های ما شرکت کنید</h2>
+<p class="lead mb-4 text-white">با حضور در برنامه‌های انجمن، لحظات شادی را برای کودکان رقم بزنید</p>
+<a href="membership.html" class="btn btn-light btn-lg me-3">
+<i class="fas fa-user-plus me-2"></i>عضویت داوطلبانه
+</a>
+<a href="#upcoming" class="btn btn-outline-light btn-lg">
+<i class="fas fa-calendar me-2"></i>مشاهده برنامه‌ها
+</a>
+</div>
+</section>
+
+
+<section class="second-calendar-section py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-4">تقویم کامل برنامه‌ها</h2>
+<div id="calendar-bottom"></div>
+</div>
+</section>
+
+
+
+
+<div class="modal fade" id="eventModal" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">جزئیات برنامه</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+
+</div>
+</div>
+</div>
+</div>
+
+
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>درباره انجمن آینده روشن</h4>
+                        <p>انجمن آینده روشن با هدف حمایت از کودکان بی‌سرپرست و کم‌برخوردار فعالیت می‌کند. ما معتقدیم هر کودکی شایسته داشتن فرصت‌های برابر برای رشد و شکوفایی است.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                            <a href="#" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="توییتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="یوتیوب"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>دسترسی سریع</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html"><i class="fas fa-angle-left ms-2"></i>درباره ما</a></li>
+                            <li><a href="team.html"><i class="fas fa-angle-left ms-2"></i>تیم مدیریت</a></li>
+                            <li><a href="calendar.html"><i class="fas fa-angle-left ms-2"></i>برنامه‌های پیش رو</a></li>
+                            <li><a href="membership.html"><i class="fas fa-angle-left ms-2"></i>عضویت در انجمن</a></li>
+                            <li><a href="#"><i class="fas fa-angle-left ms-2"></i>گزارش‌های مالی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>اطلاعات تماس</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fas fa-map-marker-alt ms-2"></i>
+                                 تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر
+                            </li>
+                            <li>
+                                <i class="fas fa-phone ms-2"></i>
+                                <a href="tel:02112345678" dir="ltr">021-12345678</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope ms-2"></i>
+                                <a href="mailto:info@ayandehroshan.org">info@ayandehroshan.org</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock ms-2"></i>
+                                شنبه تا چهارشنبه: ۹ تا ۱۷
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>خبرنامه</h4>
+                        <p>برای دریافت آخرین اخبار و برنامه‌های انجمن، در خبرنامه ما عضو شوید.</p>
+                        <form class="mt-3" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="ایمیل شما" required>
+                                <button class="btn btn-warning" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="mb-0">
+                    © <span id="currentYear">۱۴۰۳</span> انجمن آینده روشن - تمامی حقوق محفوظ است | 
+                    طراحی و توسعه با <i class="fas fa-heart text-danger animate-heartbeat"></i> برای کودکان ایران
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+<div class="floating-buttons">
+    
+    
+    <a href="#" id="scrollTopBtn" class="fab-btn fab-primary" title="بازگشت به بالا">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/main.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>
