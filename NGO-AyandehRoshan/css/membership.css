@@ -243,19 +243,19 @@ textarea.form-control {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background: var(--primary-color);
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 5px;
 }
 
 
 .benefits-section {
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 .benefit-card {
