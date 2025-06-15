@@ -1,0 +1,469 @@
+.page-header {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('../images/activities/ozviat.png') center/cover;
+    padding: 100px 0 50px;
+    color: white;
+    position: relative;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+.membership-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.membership-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.membership-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.membership-icon {
+    width: 80px;
+    height: 80px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.membership-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.membership-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.membership-card p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.membership-features {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.membership-features li {
+    padding: 8px 0;
+    color: #555;
+}
+
+.membership-features i {
+    color: #4CAF50;
+    margin-left: 10px;
+}
+
+
+.registration-form-wrapper {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 51, 102, 0.25);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+
+.interest-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.form-check {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-check:hover {
+    background: #e9ecef;
+}
+
+.form-check-input:checked ~ .form-check-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
+.select2-container--default .select2-selection--multiple {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    min-height: 45px;
+    padding: 5px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-color: var(--primary-color);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: white;
+    margin-left: 5px;
+}
+
+
+.benefits-section {
+    background: white;
+}
+
+.benefit-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+}
+
+
+.form-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.form-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    border-color: #dc3545;
+}
+
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .membership-card.featured {
+        transform: none;
+        margin-bottom: 30px;
+    }
+    
+    .registration-form-wrapper {
+        padding: 25px;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .interest-checkboxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+
+body.dark-mode .membership-card {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+body.dark-mode .registration-form-wrapper {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #4a5568;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background: #4a5568;
+    border-color: var(--primary-color);
+    color: #e2e8f0;
+}
+
+body.dark-mode .form-label {
+    color: #cbd5e0;
+}
+
+body.dark-mode .section-title {
+    color: #e2e8f0;
+}
+
+body.dark-mode .form-check {
+    background: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-mode .benefit-card {
+    background: #2d3748;
+    color: #e2e8f0;
+}
+
+body.dark-mode .benefit-card:hover {
+    background: #4a5568;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.benefit-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+.registration-success {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.registration-success i {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+.registration-success h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.registration-success p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}

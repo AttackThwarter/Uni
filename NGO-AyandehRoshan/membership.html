@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عضویت - انجمن خیریه آینده روشن</title>
+
+
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/home.css">
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/membership.css">
+</head>
+<body>
+  
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.svg" alt="انجمن آینده روشن">
+                </a>
+                
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">تیم مدیریت</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">تقویم برنامه‌ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="membership.html">عضویت</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                ارتباط با ما
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="contact-info.html">فرم تماس</a></li>
+                                <li><a class="dropdown-item" href="contact.html">اطلاعات تماس</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<section class="page-header">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h1 class="page-title">عضویت در انجمن</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">صفحه اصلی / </a></li>
+<li class="breadcrumb-item active">&ensp;عضویت</li>
+</ol>
+</nav>
+</div>
+</div>
+</section>
+
+
+<section class="membership-types py-5">
+<div class="container">
+<div class="section-header text-center mb-5">
+<h2 class="section-title">انواع عضویت</h2>
+<p class="section-subtitle">نوع عضویت مناسب خود را انتخاب کنید</p>
+</div>
+
+<div class="row">
+<div class="col-lg-4 mb-4">
+<div class="membership-card">
+<div class="membership-icon">
+<i class="fas fa-hands-helping"></i>
+</div>
+<h3>عضویت داوطلبانه</h3>
+<p>برای افرادی که می‌خواهند با وقت و تخصص خود به کودکان کمک کنند</p>
+<ul class="membership-features">
+<li><i class="fas fa-check"></i> شرکت در برنامه‌های داوطلبانه</li>
+<li><i class="fas fa-check"></i> دریافت گواهی فعالیت</li>
+<li><i class="fas fa-check"></i> دعوت به جلسات ماهانه</li>
+<li><i class="fas fa-check"></i> آموزش‌های تخصصی رایگان</li>
+</ul>
+<button class="btn btn-primary w-100" onclick="selectMembership('volunteer')">
+انتخاب این نوع عضویت
+</button>
+</div>
+</div>
+
+<div class="col-lg-4 mb-4">
+<div class="membership-card featured">
+<div class="featured-badge">پرطرفدار</div>
+<div class="membership-icon">
+<i class="fas fa-user-friends"></i>
+</div>
+<h3>عضویت حامی</h3>
+<p>برای افرادی که می‌خواهند با کمک مالی ماهانه از کودکان حمایت کنند</p>
+<ul class="membership-features">
+<li><i class="fas fa-check"></i> حمایت مستمر از یک کودک</li>
+<li><i class="fas fa-check"></i> دریافت گزارش پیشرفت</li>
+<li><i class="fas fa-check"></i> دعوت به مراسم‌های ویژه</li>
+<li><i class="fas fa-check"></i> کارت عضویت افتخاری</li>
+<li><i class="fas fa-check"></i> معافیت مالیاتی</li>
+</ul>
+<button class="btn btn-primary w-100" onclick="selectMembership('sponsor')">
+انتخاب این نوع عضویت
+</button>
+</div>
+</div>
+
+<div class="col-lg-4 mb-4">
+<div class="membership-card">
+<div class="membership-icon">
+<i class="fas fa-building"></i>
+</div>
+<h3>عضویت سازمانی</h3>
+<p>برای شرکت‌ها و سازمان‌هایی که می‌خواهند در فعالیت‌های خیریه مشارکت کنند</p>
+<ul class="membership-features">
+<li><i class="fas fa-check"></i> برنامه‌های مسئولیت اجتماعی</li>
+<li><i class="fas fa-check"></i> گزارش‌های ویژه سازمانی</li>
+<li><i class="fas fa-check"></i> لوح تقدیر و تندیس</li>
+<li><i class="fas fa-check"></i> معافیت‌های مالیاتی ویژه</li>
+</ul>
+<button class="btn btn-primary w-100" onclick="selectMembership('corporate')">
+انتخاب این نوع عضویت
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="registration-section py-5 bg-light">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="registration-form-wrapper">
+<h3 class="form-title text-center mb-4">فرم ثبت‌نام عضویت</h3>
+
+<form id="membershipForm" class="needs-validation" novalidate>
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-user"></i> اطلاعات شخصی
+</h4>
+
+<div class="row">
+<div class="col-md-6 mb-3">
+<label class="form-label">نام <span class="required">*</span></label>
+<input type="text" class="form-control" name="firstName" required>
+<div class="invalid-feedback">لطفا نام خود را وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">نام خانوادگی <span class="required">*</span></label>
+<input type="text" class="form-control" name="lastName" required>
+<div class="invalid-feedback">لطفا نام خانوادگی خود را وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">نام پدر <span class="required">*</span></label>
+<input type="text" class="form-control" name="fatherName" required>
+<div class="invalid-feedback">لطفا نام پدر خود را وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">کد ملی <span class="required">*</span></label>
+<input type="text" class="form-control" name="nationalId" pattern="[0-9]{10}" maxlength="10" required>
+<div class="invalid-feedback">کد ملی باید ۱۰ رقم باشد</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">تاریخ تولد <span class="required">*</span></label>
+<input type="text" class="form-control persian-date" name="birthDate" placeholder="۱۳۷۰/۰۱/۰۱" required>
+<div class="invalid-feedback">لطفا تاریخ تولد خود را وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">جنسیت <span class="required">*</span></label>
+<select class="form-select" name="gender" required>
+<option value="">انتخاب کنید</option>
+<option value="male">مرد</option>
+<option value="female">زن</option>
+</select>
+<div class="invalid-feedback">لطفا جنسیت خود را انتخاب کنید</div>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-phone"></i> اطلاعات تماس
+</h4>
+
+<div class="row">
+<div class="col-md-6 mb-3">
+<label class="form-label">شماره موبایل <span class="required">*</span></label>
+<input type="tel" class="form-control" name="mobile" pattern="09[0-9]{9}" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>
+<div class="invalid-feedback">شماره موبایل را به درستی وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">تلفن ثابت</label>
+<input type="tel" class="form-control" name="phone" placeholder="۰۲۱۱۲۳۴۵۶۷۸">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">ایمیل <span class="required">*</span></label>
+<input type="email" class="form-control" name="email" required>
+<div class="invalid-feedback">ایمیل معتبر وارد کنید</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">استان <span class="required">*</span></label>
+<select class="form-select" name="province" id="provinceSelect" required>
+<option value="">انتخاب کنید</option>
+<option value="tehran">تهران</option>
+<option value="isfahan">اصفهان</option>
+<option value="fars">فارس</option>
+<option value="khorasan">خراسان رضوی</option>
+<option value="azerbaijan">آذربایجان شرقی</option>
+</select>
+<div class="invalid-feedback">لطفا استان خود را انتخاب کنید</div>
+</div>
+
+<div class="col-12 mb-3">
+<label class="form-label">آدرس کامل <span class="required">*</span></label>
+<textarea class="form-control" name="address" rows="3" required></textarea>
+<div class="invalid-feedback">لطفا آدرس خود را وارد کنید</div>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-graduation-cap"></i> تحصیلات و مهارت‌ها
+</h4>
+
+<div class="row">
+<div class="col-md-6 mb-3">
+<label class="form-label">مدرک تحصیلی</label>
+<select class="form-select" name="education">
+<option value="">انتخاب کنید</option>
+<option value="diploma">دیپلم</option>
+<option value="associate">کاردانی</option>
+<option value="bachelor">کارشناسی</option>
+<option value="master">کارشناسی ارشد</option>
+<option value="phd">دکتری</option>
+</select>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">رشته تحصیلی</label>
+<input type="text" class="form-control" name="field">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">شغل</label>
+<input type="text" class="form-control" name="occupation">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">مهارت‌های تخصصی</label>
+<select class="form-select select2-multiple" name="skills[]" multiple>
+<option value="teaching">تدریس</option>
+<option value="counseling">مشاوره</option>
+<option value="medical">پزشکی</option>
+<option value="psychology">روانشناسی</option>
+<option value="art">هنر</option>
+<option value="sports">ورزش</option>
+<option value="computer">کامپیوتر</option>
+<option value="languages">زبان‌های خارجی</option>
+<option value="accounting">حسابداری</option>
+<option value="marketing">بازاریابی</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-heart"></i> علاقه‌مندی‌ها و زمان همکاری
+</h4>
+
+<div class="row">
+<div class="col-12 mb-3">
+<label class="form-label">زمینه‌های علاقه‌مند به همکاری</label>
+<div class="interest-checkboxes">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="education" id="interest1">
+<label class="form-check-label" for="interest1">
+آموزش و تدریس
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="health" id="interest2">
+<label class="form-check-label" for="interest2">
+بهداشت و درمان
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="culture" id="interest3">
+<label class="form-check-label" for="interest3">
+فرهنگی و هنری
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="sports" id="interest4">
+<label class="form-check-label" for="interest4">
+ورزشی
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="fundraising" id="interest5">
+<label class="form-check-label" for="interest5">
+جذب کمک‌های مردمی
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" name="interests[]" value="administrative" id="interest6">
+<label class="form-check-label" for="interest6">
+امور اداری و دفتری
+</label>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">ساعات همکاری در هفته</label>
+<select class="form-select" name="hoursPerWeek">
+<option value="">انتخاب کنید</option>
+<option value="1-5">۱ تا ۵ ساعت</option>
+<option value="5-10">۵ تا ۱۰ ساعت</option>
+<option value="10-20">۱۰ تا ۲۰ ساعت</option>
+<option value="20+">بیش از ۲۰ ساعت</option>
+</select>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">روزهای همکاری</label>
+<select class="form-select select2-multiple" name="availableDays[]" multiple>
+<option value="saturday">شنبه</option>
+<option value="sunday">یکشنبه</option>
+<option value="monday">دوشنبه</option>
+<option value="tuesday">سه‌شنبه</option>
+<option value="wednesday">چهارشنبه</option>
+<option value="thursday">پنج‌شنبه</option>
+<option value="friday">جمعه</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-id-card"></i> نوع عضویت
+</h4>
+
+<div class="row">
+<div class="col-12 mb-3">
+<label class="form-label">نوع عضویت انتخابی <span class="required">*</span></label>
+<select class="form-select" name="membershipType" id="membershipTypeSelect" required>
+<option value="">انتخاب کنید</option>
+<option value="volunteer">عضویت داوطلبانه</option>
+<option value="sponsor">عضویت حامی</option>
+<option value="corporate">عضویت سازمانی</option>
+</select>
+<div class="invalid-feedback">لطفا نوع عضویت را انتخاب کنید</div>
+</div>
+
+<div class="col-12 mb-3" id="sponsorshipAmount" style="display: none;">
+<label class="form-label">مبلغ حمایت ماهانه</label>
+<select class="form-select" name="monthlyAmount">
+<option value="">انتخاب کنید</option>
+<option value="100000">۱۰۰,۰۰۰ تومان</option>
+<option value="200000">۲۰۰,۰۰۰ تومان</option>
+<option value="500000">۵۰۰,۰۰۰ تومان</option>
+<option value="1000000">۱,۰۰۰,۰۰۰ تومان</option>
+<option value="custom">مبلغ دلخواه</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<h4 class="section-title">
+<i class="fas fa-info-circle"></i> اطلاعات تکمیلی
+</h4>
+
+<div class="row">
+<div class="col-12 mb-3">
+<label class="form-label">سابقه فعالیت در امور خیریه</label>
+<textarea class="form-control" name="charityExperience" rows="3" 
+placeholder="در صورت داشتن سابقه فعالیت خیریه، شرح دهید"></textarea>
+</div>
+
+<div class="col-12 mb-3">
+<label class="form-label">نحوه آشنایی با انجمن</label>
+<select class="form-select" name="referralSource">
+<option value="">انتخاب کنید</option>
+<option value="website">وب‌سایت</option>
+<option value="social">شبکه‌های اجتماعی</option>
+<option value="friend">معرفی دوستان</option>
+<option value="media">رسانه‌ها</option>
+<option value="event">شرکت در برنامه‌ها</option>
+<option value="other">سایر</option>
+</select>
+</div>
+</div>
+</div>
+
+
+<div class="form-section">
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="terms" required>
+<label class="form-check-label" for="terms">
+<a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">شرایط و ضوابط عضویت</a> را مطالعه کرده و می‌پذیرم
+</label>
+<div class="invalid-feedback">پذیرش شرایط و ضوابط الزامی است</div>
+</div>
+
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="newsletter">
+<label class="form-check-label" for="newsletter">
+مایل به دریافت خبرنامه و اطلاع‌رسانی‌های انجمن هستم
+</label>
+</div>
+
+<div class="text-center">
+<button type="submit" class="btn btn-primary btn-lg px-5">
+<i class="fas fa-user-plus"></i> ثبت درخواست عضویت
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="benefits-section py-5">
+<div class="container">
+<div class="section-header text-center mb-5">
+<h2 class="section-title">مزایای عضویت</h2>
+<p class="section-subtitle">با عضویت در انجمن از این امتیازات بهره‌مند شوید</p>
+</div>
+
+<div class="row">
+<div class="col-lg-3 col-md-6 mb-4">
+<div class="benefit-card text-center">
+<div class="benefit-icon">
+<i class="fas fa-certificate text-dark"></i>
+</div>
+<h4>گواهی فعالیت</h4>
+<p>دریافت گواهی رسمی فعالیت‌های داوطلبانه</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<div class="benefit-card text-center">
+<div class="benefit-icon">
+<i class="fas fa-graduation-cap text-dark"></i>
+</div>
+<h4>آموزش رایگان</h4>
+<p>شرکت در دوره‌های آموزشی تخصصی</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<div class="benefit-card text-center">
+<div class="benefit-icon">
+<i class="fas fa-users text-dark"></i>
+</div>
+<h4>شبکه‌سازی</h4>
+<p>عضویت در شبکه داوطلبان و خیرین</p>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+<div class="benefit-card text-center">
+<div class="benefit-icon">
+<i class="fas fa-gift text-dark"></i>
+</div>
+<h4>تخفیفات ویژه</h4>
+<p>استفاده از تخفیفات سازمان‌های همکار</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>درباره انجمن آینده روشن</h4>
+                        <p>انجمن آینده روشن با هدف حمایت از کودکان بی‌سرپرست و کم‌برخوردار فعالیت می‌کند. ما معتقدیم هر کودکی شایسته داشتن فرصت‌های برابر برای رشد و شکوفایی است.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                            <a href="#" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="توییتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="یوتیوب"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>دسترسی سریع</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html"><i class="fas fa-angle-left ms-2"></i>درباره ما</a></li>
+                            <li><a href="team.html"><i class="fas fa-angle-left ms-2"></i>تیم مدیریت</a></li>
+                            <li><a href="calendar.html"><i class="fas fa-angle-left ms-2"></i>برنامه‌های پیش رو</a></li>
+                            <li><a href="membership.html"><i class="fas fa-angle-left ms-2"></i>عضویت در انجمن</a></li>
+                            <li><a href="#"><i class="fas fa-angle-left ms-2"></i>گزارش‌های مالی</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>اطلاعات تماس</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fas fa-map-marker-alt ms-2"></i>
+                                 تهران، خیابان ولیعصر، بالاتر از میدان ولیعصر
+                            </li>
+                            <li>
+                                <i class="fas fa-phone ms-2"></i>
+                                <a href="tel:02112345678" dir="ltr">021-12345678</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope ms-2"></i>
+                                <a href="mailto:info@ayandehroshan.org">info@ayandehroshan.org</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock ms-2"></i>
+                                شنبه تا چهارشنبه: ۹ تا ۱۷
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4>خبرنامه</h4>
+                        <p>برای دریافت آخرین اخبار و برنامه‌های انجمن، در خبرنامه ما عضو شوید.</p>
+                        <form class="mt-3" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="ایمیل شما" required>
+                                <button class="btn btn-warning" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="mb-0">
+                    © <span id="currentYear">۱۴۰۳</span> انجمن آینده روشن - تمامی حقوق محفوظ است | 
+                    طراحی و توسعه با <i class="fas fa-heart text-danger animate-heartbeat"></i> برای کودکان ایران
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+<div class="floating-buttons">
+    
+    
+    <a href="#" id="scrollTopBtn" class="fab-btn fab-primary" title="بازگشت به بالا">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/main.js"></script>
+<script src="js/membership.js"></script>
+</body>
+</html>
