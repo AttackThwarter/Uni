@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         sponsors: [
             'images/articles/sp1.jpg',
-            'images/articles/sp2.gif.crdownload',
+            'images/articles/sp2.jpg',
             'images/articles/sp3.png',
             'images/articles/sp4.png',
             'images/articles/sp5.png',
