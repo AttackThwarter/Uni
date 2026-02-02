@@ -63,4 +63,3 @@ Since the database is created locally, you can register a new user via the **Sig
 
 ## 📄 License
 This project is open-source and available under the MIT License but you can use any Licenses just for this project not others.
-```
